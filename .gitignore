@@ -1,0 +1,9 @@
+dataorg_notes.tex
+*.aux
+*.log
+*.nav
+*.out
+*.pdf
+*.snm
+*.toc
+Figs/

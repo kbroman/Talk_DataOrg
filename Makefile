@@ -1,6 +1,6 @@
 LEC = dataorg
 
-FIGS=Figs/example_ugly.pdf \
+FIGS=Figs/spreadsheet_ugly.pdf \
 	 Figs/data_dict.pdf
 
 R_OPTS=--no-save --no-restore --no-init-file --no-site-file
@@ -13,7 +13,7 @@ docs/%.pdf: %.pdf
 Figs/data_dict.pdf: R/make_data_dict.R
 	cd $(<D);R CMD BATCH $(R_OPTS) $(<F)
 
-Figs/example_ugly.pdf: R/make_spreadsheet_figs.R R/example_ugly.csv R/example_tidy.csv
+Figs/spreadsheet_ugly.pdf: R/make_spreadsheet_figs.R R/example_ugly.csv R/example_tidy.csv
 	cd $(<D);R CMD BATCH $(R_OPTS) $(<F)
 
 $(LEC).pdf: $(LEC).tex header.tex $(FIGS)

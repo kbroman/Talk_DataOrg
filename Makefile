@@ -1,7 +1,8 @@
 LEC = dataorg
 
 FIGS=Figs/spreadsheet_ugly.pdf \
-	 Figs/data_dict.pdf
+	 Figs/data_dict.pdf \
+	 Figs/spreadsheet_colnames1.pdf
 
 R_OPTS=--no-save --no-restore --no-init-file --no-site-file
 
@@ -14,6 +15,9 @@ Figs/data_dict.pdf: R/make_data_dict.R
 	cd $(<D);R CMD BATCH $(R_OPTS) $(<F)
 
 Figs/spreadsheet_ugly.pdf: R/make_spreadsheet_figs.R R/example_ugly.csv R/example_tidy.csv
+	cd $(<D);R CMD BATCH $(R_OPTS) $(<F)
+
+Figs/spreadsheet_colnames1.pdf: R/consistent_columns.R
 	cd $(<D);R CMD BATCH $(R_OPTS) $(<F)
 
 $(LEC).pdf: $(LEC).tex header.tex $(FIGS)

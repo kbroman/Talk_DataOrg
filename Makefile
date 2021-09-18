@@ -5,7 +5,8 @@ FIGS=Figs/spreadsheet_ugly.pdf \
 	 Figs/spreadsheet_colnames1.pdf \
 	 Figs/dates.pdf \
 	 Figs/no_highlighting.pdf \
-	 Figs/skipping_cells.pdf
+	 Figs/skipping_cells.pdf \
+	 Figs/consistent_cats.pdf
 
 R_OPTS=--no-save --no-restore --no-init-file --no-site-file
 

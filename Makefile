@@ -2,7 +2,8 @@ LEC = dataorg
 
 FIGS=Figs/spreadsheet_ugly.pdf \
 	 Figs/data_dict.pdf \
-	 Figs/spreadsheet_colnames1.pdf
+	 Figs/spreadsheet_colnames1.pdf \
+	 Figs/dates.pdf
 
 R_OPTS=--no-save --no-restore --no-init-file --no-site-file
 

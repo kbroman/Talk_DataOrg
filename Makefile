@@ -11,7 +11,7 @@ all: docs/$(LEC).pdf docs/$(LEC)_notes.pdf
 docs/%.pdf: %.pdf
 	cp $< $@
 
-Figs/data_dict.pdf: R/make_data_dict.R
+Figs/%.pdf: R/%.R
 	cd $(<D);R CMD BATCH $(R_OPTS) $(<F)
 
 Figs/spreadsheet_ugly.pdf: R/make_spreadsheet_figs.R R/example_ugly.csv R/example_tidy.csv

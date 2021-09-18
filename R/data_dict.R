@@ -17,5 +17,5 @@ mat <- data.frame(name=c("mouse", "sex", "sac_date", "partial_inflation", "coat_
                                 "Indicates if mouse stored food in their bedding",
                                 "Number of days on high-fat diet"),
                   stringsAsFactors=FALSE)
-excel_fig(mat, fig_width=690, fig_height=190, cellwidth=c(rep(130, 4), 400), direct2svg=FALSE)
+excel_fig(mat, fig_width=690, fig_height=190, cellwidth=c(rep(130, 4), 400))
 dev.off()

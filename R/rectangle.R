@@ -111,8 +111,8 @@ excel_fig(mat5gtt, col_names=FALSE, cellwidth=c(85, 85, 85, 110, 110))
 mat5gtt[c(2,7,15),4] <- "NA"
 mat5gtt <- cbind(mat5gtt, c("note", rep("", 14)))
 mat5gtt[c(2,7,15),5] <- "insulin below curve"
-excel_fig(mat5gtt, col_names=FALSE, cellwidth=c(85, 85, 85, 110, 110, 160),
-          direct2svg=TRUE)
+excel_fig(mat5gtt, col_names=FALSE, cellwidth=c(85, 85, 85, 110, 110, 160))
+
 
 
 

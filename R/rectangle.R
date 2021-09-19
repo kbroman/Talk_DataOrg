@@ -92,7 +92,7 @@ dev.off()
 
 
 # bad example with two header rows
-pdf(here("Figs/not_rectangle_3.pdf"), height=5, width=10, pointsize=12)
+pdf(here("Figs/not_rectangle_3.pdf"), height=4, width=10, pointsize=12)
 mat6 <- rbind(c("", "", "week 4", "", "", "week 6", "", "", "week 8", "", ""),
               c("Mouse ID", "SEX", rep(c("date", "weight", "glucose"), 3)),
               c("3005", "M", "3/30/2007",  19.3, 635.0, "4/11/2007",  31,   460.7, "4/27/2007",  39.6, 530.2),
@@ -106,7 +106,7 @@ excel_fig(mat6, cellwidth=c(85, 85, 85, 105, 85, 95, 105, 85, 95, 105, 85, 95),
 dev.off()
 
 # week in variable name
-pdf(here("Figs/not_rectangle_3_corr1.pdf"), height=5, width=10, pointsize=12)
+pdf(here("Figs/not_rectangle_3_corr1.pdf"), height=4, width=10, pointsize=12)
 mat6 <- mat6[-1,]
 wk <- c(4, 6, 8)
 firstcol <- c(3,6,9)

@@ -62,7 +62,7 @@
     down-stream analysis difficult.
 
     Data analysts often spend a lot of time rearranging data prior to
-    analysis. Here, I'll take about how to organize data in
+    analysis. Here, I'll talk about how to organize data in
     spreadsheets, for ease of analysis.
   }
 
@@ -102,6 +102,9 @@
 
   \note{
     First, be consistent.
+
+    Even if you make idiosyncratic choices, if you follow them in a
+    consistent way, it will be easier to handle the product.
   }
 
 \end{frame}
@@ -132,7 +135,8 @@
   \figh{Figs/consistent_cats.pdf}{0.7}
 
   \note{
-
+    Be consistent in your labels on categories. (Ideally, use short
+    but meaningful labels.)
   }
 
 \end{frame}
@@ -150,7 +154,11 @@
   \only<2>{\centerline{\large And no {\tt \vhilit 999} or {\tt \vhilit -999}!}}
 
   \note{
-
+    Be consistent in your code for missing values. And don't use a
+    code that is a valid number (like 999), as it might be missed in
+    later analyses. (I mean, they might be included, but with that
+    crazy value.) I prefer to not have empty cells, because it is less
+    clear whether it is a mistake or intentional.
   }
 
 \end{frame}
@@ -164,7 +172,11 @@
   \figh{Figs/consistent_ids.pdf}{0.7}
 
   \note{
+    Be consistent in the format of subject IDs. OMG I spend so much
+    time converting subject IDs between formats.
 
+    I prefer to not use raw numbers, but it's nice to have them be
+    short.
   }
 
 \end{frame}

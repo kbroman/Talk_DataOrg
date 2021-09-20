@@ -7,7 +7,8 @@ FIGS=Figs/spreadsheet_ugly.pdf \
 	 Figs/no_highlighting.pdf \
 	 Figs/skipping_cells.pdf \
 	 Figs/consistent_cats.pdf \
-	 Figs/rectangle.pdf
+	 Figs/rectangle.pdf \
+	 Figs/one_thing_per_cell.pdf
 
 R_OPTS=--no-save --no-restore --no-init-file --no-site-file
 

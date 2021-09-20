@@ -5,7 +5,7 @@ on 24 Sept 2021,
 based on [my paper of the same title with Kara Woo](https://doi.org/gdz6cm).
 Also see the [related website](https://kbroman.org/dataorg).
 
-PDF of slides: <https://kbroman.org/Talk_DataOrg>
+PDF of slides: <https://kbroman.org/Talk_DataOrg/dataorg.pdf>
 
 PDF of slides with notes: <https://kbroman.org/Talk_DataOrg/dataorg_notes.pdf>
 

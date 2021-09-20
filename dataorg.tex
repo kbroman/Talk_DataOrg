@@ -295,6 +295,11 @@
     And dates in Excel are a abomination. It likes to turn non-dates
     into dates, and it stores dates internally as an integer, but with
     different starting values on different systems.
+
+    My preference is to force Excel to treat certain columns as text.
+
+    One might also enter dates as numbers `YYYYMMDD`, or split them
+    into 3 columns (year, month, day).
   }
 
 \end{frame}
@@ -466,6 +471,12 @@ RBM Tube Number Key.xls
   \end{columns}
 
   \note{
+    The datasets I see tend to be organized in complex ways.
+    Here are four examples.
+
+    But when it comes to the layout of the data, what I want to see is
+    just a rectangle, with subjects as rows, variables as columns, and
+    a single header row.
   }
 \end{frame}
 
@@ -481,6 +492,11 @@ RBM Tube Number Key.xls
     }
 
   \note{
+    For example, this dataset has three variables presented as rows,
+    each with its own row of IDs, and with blank lines between.
+
+    A preferred layout would be to have a single column of IDs, and
+    then another column for each attribute or measured variable.
   }
 \end{frame}
 
@@ -498,6 +514,17 @@ RBM Tube Number Key.xls
     }
 
   \note{
+    This example has data for a glucose tolerance test: a treatment
+    was applied, and then glucose and insulin were measured from
+    successive serum samples over time.
+
+    The IDs are provided just in the rows for time=0. The assay date
+    and the weight of the mouse are provided in those rows, too.
+
+    One solution would be to fill in those ID, date, and weight
+    measurements in each row. No empty cells!
+
+    But this is a lot of duplicated information.
   }
 \end{frame}
 
@@ -523,6 +550,12 @@ RBM Tube Number Key.xls
   \end{columns}
 
   \note{
+    Another alternative is to split the data into two tables: one with
+    assay date and mouse weight, and a second with the actual GTT
+    data.
+
+    We would also prefer those ``lo below curve'' notes pulled out as
+    a separate column.
   }
 \end{frame}
 
@@ -544,6 +577,15 @@ RBM Tube Number Key.xls
     }
 
   \note{
+    In this example, there are two header rows. One indicates week (4,
+    6, or 8) for sets of three columns.
+
+    Instead, we might include the week number in the column names, so
+    that we just need a single header row.
+
+    Alternatively, we could put each week in a separate row, and add a
+    column with the week variable, so that each mouse's information is
+    split across three rows.
   }
 \end{frame}
 
@@ -556,6 +598,12 @@ RBM Tube Number Key.xls
 
 
   \note{
+    This spreadsheet is a single tab in a 500-tab Excel file, with one
+    tab per animal. These data are similar to the GTT data. I'd
+    probably split it into two files with days on diet and sex
+    in one file and the experiment values in the other. And I would
+    drop the calculations of mean, SD, and fold-change and just focus
+    on a file with the raw measurements.
   }
 \end{frame}
 
@@ -572,9 +620,22 @@ RBM Tube Number Key.xls
   \centering
   No calculations in the data file
 
-  % TODO add a figure with an extraneous number in the IDs
-
   \note{
+    And related to that last example: don't do calculations in your
+    raw data file. Even if you find Excel useful for data analysis and
+    visualization, it's best to do those things in a separate file,
+    and keep your raw data pure and locked down, and opened just to
+    add or correct data.
+
+    Every time you open a data file, you introduce an opportunity for
+    errors. So you only want to open them when you really need to.
+
+    Have you ever opened an Excel file and started typing and nothing
+    happens, and then you realize that you need to select a cell
+    first? Well sometimes the stuff you were typing is entered in
+    there in some sporadic location, for your data analyst to find
+    later. I've seen some really weird bits of text typed into data
+    files.
   }
 \end{frame}
 
@@ -613,6 +674,11 @@ RBM Tube Number Key.xls
 \fighnc{Figs/no_highlighting_2.pdf}{0.7} }
 
   \note{
+    Never use color or formatting as data. It can be tricky to extract
+    such information.
+
+    Rather, add an additional column, for example indicating
+    questionable values.
   }
 \end{frame}
 
@@ -627,6 +693,22 @@ RBM Tube Number Key.xls
   \ei
 
   \note{
+    Be sure to backup your data. Many of us use dropbox or google
+    drive. The key things are that backups be automatic and in
+    multiple locations including off site.
+
+    If you need to insert an external drive for the backup to occur,
+    it won't be done as frequently as it should. If it's not happening
+    automatically, it won't get done as you'd like.
+
+    And off site, so in case there's a fire or other accident in your
+    lab or home, you don't lose everything.
+
+    And consider a formal version control system like git and github.
+    It's not ideal for large datasets, but it's good to be able to
+    retain multiple versions of your data over time: to see what
+    changes were made when, or to look at the state of the data on a
+    particular date.
   }
 \end{frame}
 
@@ -637,6 +719,11 @@ RBM Tube Number Key.xls
   \figh{Figs/data_validation.png}{0.65}
 
   \note{
+    I don't have much experience with data entry, but if you're using
+    excel to enter data, consider its data validation features, where
+    you can indicate the allowed values in different columns, to help
+    to catch data entry errors and to ensure consistency of variable
+    categories.
   }
 \end{frame}
 
@@ -654,6 +741,11 @@ RBM Tube Number Key.xls
   \ei
 
   \note{
+    While Excel, OpenOffice, and Google Sheets formats are likely to
+    be continued to be readable, I recommend saving data in
+    non-proprietary plain-text formats, such as comma-delimited or
+    tab-delimited text files, so that future users won't have to rely
+    on the availability of particular software tools.
   }
 \end{frame}
 

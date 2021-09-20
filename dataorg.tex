@@ -193,7 +193,8 @@
 \fighnc{Figs/spreadsheet_colnames2.pdf}{0.8}
 
   \note{
-
+    If you have multiple batches of the same measurements, use the
+    same column names in each file.
   }
 
 \end{frame}
@@ -214,7 +215,8 @@
 \fighnc{Figs/spreadsheet_colnames3.pdf}{0.8}
 
   \note{
-
+    And keep those columns in the same order. Use the same layout for
+    the multiple spreadsheets.
   }
 
 \end{frame}
@@ -227,7 +229,9 @@
   \figh{Figs/dates.pdf}{0.8}
 
   \note{
-
+    Use a single format for all dates. I don't remember what the e's
+    were for in this example, but sometimes using 4 digits for the
+    year and sometimes 2 can be painful to deal with.
   }
 
 \end{frame}
@@ -247,7 +251,9 @@
 
 
   \note{
-    Go with the xkcd format for writing dates, for ease of sorting.
+    And really, you should just go with the ISO 8601 format for
+    writing dates, for ease of sorting, and because we should all use
+    the same format.
   }
 
 \end{frame}
@@ -263,7 +269,9 @@
 \figwboxed{Figs/oct4_tweet_2.png}{0.7}
 
   \note{
-
+    And dates in Excel are a abomination. It likes to turn non-dates
+    into dates, and it stores dates internally as an integer, but with
+    different starting values on different systems.
   }
 
 \end{frame}
@@ -304,7 +312,16 @@ RBM Tube Number Key.xls
 }
 
   \note{
+    Where you can, you should also strive for some consistent system
+    for naming files. And for later analysis, it would be best to
+    avoid spaces or other special characters (though underscores and
+    hyphens are good).
 
+    File names should be descriptive of their contents, so you don't
+    need to look inside to understand what it contains.
+
+    Take advantage of the way the computer sorts files, by starting
+    with general groupings, followed by more specific groupings.
   }
 
 \end{frame}
@@ -321,7 +338,8 @@ RBM Tube Number Key.xls
 \figh{Figs/phd101212s.png}{0.8}
 
 \note{
-  Never include ``final'' in a file name.
+  Never include ``final'' in a file name. Best to use version numbers.
+  No file is ever final.
 }
 
 \end{frame}
@@ -345,7 +363,9 @@ RBM Tube Number Key.xls
 
 
   \note{
-
+    More generally, you want to put thought into the names that you
+    choose for things, such as the names of columns. Don't include
+    spaces, and be short but descriptive.
   }
 
 \end{frame}
@@ -359,6 +379,14 @@ RBM Tube Number Key.xls
   \only<2|handout 0>{\figh{Figs/skipping_cells_2.pdf}{0.8}}
 
   \note{
+    Don't leave any cells empty, particularly as here where just the
+    first of several repeated values are shown. If the rows of this
+    spreadsheet get sorted, the information in the date column will be
+    lost.
+
+    In general, I prefer to have some missing value code inserted
+    where data are missing, rather than leave cells blank. This helps
+    to distinguish actually missing data from mistakes.
   }
 \end{frame}
 
@@ -383,6 +411,11 @@ RBM Tube Number Key.xls
 
 
   \note{
+    Put just one value in each cell. The most common issues here are
+    to include a note with a value. (Instead, put notes in a separate column.)
+    Or you might want to include the units. (Instead, include the
+    units in the column name, or even better include them in a
+    separate data dictionary file, with metadata.)
   }
 \end{frame}
 

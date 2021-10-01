@@ -9,6 +9,8 @@ PDF of slides: <https://kbroman.org/Talk_DataOrg/dataorg.pdf>
 
 PDF of slides with notes: <https://kbroman.org/Talk_DataOrg/dataorg_notes.pdf>
 
+Video of presentation: <https://youtu.be/t74E0a90gkA>
+
 ### License
 
 To the extent possible under law,
